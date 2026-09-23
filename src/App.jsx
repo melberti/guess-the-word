@@ -6,6 +6,7 @@ import './index.css';
 import GameOver from './components/GameOver';
 import TodaysWord from './components/TodaysWord';
 import WordGuess from './components/WordGuess';
+import Footer from './components/Footer';
 
 function App() {
   const [secretWord, setSecretWord] = useState(() => getRandomWord());
@@ -25,25 +26,29 @@ function App() {
   }
 
   return (
-    <>
-      <TodaysWord
-        gameOver={gameOver}
-        secretWord={secretWord}
-      />
-      <WordGuess
-        gameOver={gameOver}
-        secretWord={secretWord}
-        setGameOver={setGameOver}
-        setWon={setWon}
-      />
-
-      {gameOver && (
-        <GameOver
-          won={won}
-          reset={reset}
+    <div className="container">
+      <main>
+        <TodaysWord
+          gameOver={gameOver}
+          secretWord={secretWord}
         />
-      )}
-    </>
+        <WordGuess
+          gameOver={gameOver}
+          secretWord={secretWord}
+          setGameOver={setGameOver}
+          setWon={setWon}
+        />
+
+        {gameOver && (
+          <GameOver
+            won={won}
+            reset={reset}
+          />
+        )}
+      </main>
+
+      <Footer />
+    </div>
   );
 }
 

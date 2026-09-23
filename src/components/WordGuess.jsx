@@ -33,6 +33,7 @@ function WordGuess({ secretWord, gameOver, setGameOver, setWon }) {
 
     if (word === secretWord) {
       setWon(true);
+      setGameOver(true);
     }
 
     setWord('');
