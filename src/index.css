@@ -1,0 +1,67 @@
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  text-align: center;
+}
+
+.intro {
+  text-align: left;
+  width: 400px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+form {
+  margin-top: 20px;
+}
+
+.green {
+  background-color: rgb(30, 241, 30);
+}
+
+.gray {
+  background-color: #f5f3f3;
+}
+.red {
+  background-color: red;
+}
+
+.blue {
+  background-color: blue;
+}
+
+.yellow {
+  background-color: yellow;
+}
+
+.orange {
+  background-color: orange;
+}
+
+.grid,
+.grid .small {
+  display: flex;
+  flex-direction: row; /* Forces items into a single row */
+  flex-wrap: nowrap; /* Prevents wrapping to a new line */
+  justify-content: center; /* Centers items horizontally */
+  align-items: center; /* Centers items vertically (optional) */
+  gap: 4px;
+  margin-bottom: 5px;
+}
+
+.grid div {
+  min-width: 40px;
+  width: 40px;
+  padding-left: auto;
+  padding-right: auto;
+  text-align: center;
+  font-weight: bold;
+  font-size: 32px;
+
+  border: solid 1px;
+}
+
+.grid.small div {
+  min-width: 30px;
+  width: 30px;
+  font-size: 24px;
+}
