@@ -23,19 +23,6 @@ main {
   flex: 1;
 }
 
-.intro {
-  text-align: left;
-  width: 400px;
-  margin-left: auto;
-  margin-right: auto;
-}
-
-footer {
-  margin-top: auto;
-  font-size: 14px;
-  margin-bottom: 25px;
-}
-
 form {
   margin-top: 20px;
 }
@@ -63,6 +50,67 @@ form {
   background-color: orange;
 }
 
+/* --- Tablet and Larger Screens --- */
+@media screen and (min-width: 768px) {
+  footer {
+    font-size: 14px;
+  }
+
+  .intro {
+    width: 400px;
+  }
+}
+
+/* mobile first */
+footer {
+  margin-top: auto;
+  margin-left: auto;
+  margin-right: auto;
+  font-size: 13px;
+  margin-bottom: 25px;
+}
+
+button {
+  background-color: red;
+  border-radius: 4px;
+  padding: 5px;
+  color: white;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+input {
+  border-radius: 4px;
+  padding: 5px;
+  outline: silver;
+  text-transform: uppercase;
+}
+
+.intro {
+  text-align: left;
+  width: 300px;
+  font-size: 14px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.grid > div {
+  min-width: 40px;
+  width: 40px;
+  text-align: center;
+  font-weight: bold;
+  font-size: 32px;
+
+  border: solid 2px rgb(108, 107, 107);
+}
+
+.grid.small > div {
+  min-width: 30px;
+  width: 30px;
+  font-size: 24px;
+  border: solid 2px rgb(108, 107, 107);
+}
+
 .grid,
 .grid .small {
   display: flex;
@@ -72,22 +120,4 @@ form {
   align-items: center; /* Centers items vertically (optional) */
   gap: 4px;
   margin-bottom: 5px;
-}
-
-.grid div {
-  min-width: 40px;
-  width: 40px;
-  padding-left: auto;
-  padding-right: auto;
-  text-align: center;
-  font-weight: bold;
-  font-size: 32px;
-
-  border: solid 1px;
-}
-
-.grid.small div {
-  min-width: 30px;
-  width: 30px;
-  font-size: 24px;
 }
